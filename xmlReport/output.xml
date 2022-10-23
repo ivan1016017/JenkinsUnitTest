@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="ivan-Z590I-AORUS-ULTRA" name="pytest" skipped="0" tests="7" time="1.110" timestamp="2022-10-23T18:03:10.833828"><testcase classname="utests.test_model2.Test_Model2" file="utests/test_model2.py" line="6" name="test_get_all_users" time="0.332"></testcase><testcase classname="utests.test_model2.Test_Model2" file="utests/test_model2.py" line="25" name="test_get_auth_user_count" time="0.001"><failure message="AssertionError: 9981 != 9989">self = &lt;utests.test_model2.Test_Model2 testMethod=test_get_auth_user_count&gt;, mock_user = &lt;MagicMock name=&apos;User&apos; id=&apos;139773144965856&apos;&gt;
+
+    @patch(&apos;main.models.User&apos;)
+    def test_get_auth_user_count(self, mock_user):
+        mock_user.query.filter_by(authenticated=1).count.return_value = 9981
+        count = User.get_auth_user_count()
+        #print (count)
+&gt;       self.assertEqual(count, 9989)
+E       AssertionError: 9981 != 9989
+
+utests/test_model2.py:31: AssertionError</failure></testcase><testcase classname="utests.test_model2.Test_Model2" file="utests/test_model2.py" line="17" name="test_get_user_by_email" time="0.166"></testcase><testcase classname="utests.test_model_basic.TestModel1" file="utests/test_model_basic.py" line="17" name="test_email" time="0.170"></testcase><testcase classname="utests.test_model_basic.TestModel1" file="utests/test_model_basic.py" line="25" name="test_hashed_pwd" time="0.165"></testcase><testcase classname="utests.test_model_basic.TestModel1" file="utests/test_model_basic.py" line="21" name="test_registeredtime" time="0.000"></testcase><testcase classname="utests.test_model_basic.TestModel1" file="utests/test_model_basic.py" line="28" name="test_to_json" time="0.001"></testcase></testsuite></testsuites>
