@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '#### Create Python3 Virtual Environment ####'
-source scl_source enable rh-python36
+source scl_source enable rh-python3
 VIRTUAL_ENV='venvironment'
 python -m venv $VIRTUAL_ENV
 
